@@ -1,4 +1,4 @@
-import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
+import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { FiHome, FiDroplet, FiDollarSign, FiLogOut, FiPower } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
@@ -8,7 +8,6 @@ import { toast } from 'react-toastify';
 const Layout = () => {
   const { user, logout } = useAuth();
   const location = useLocation();
-  const navigate = useNavigate();
   const [isOnDuty, setIsOnDuty] = useState(false);
   const [isDriverActive, setIsDriverActive] = useState(true);
 

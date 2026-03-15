@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Form, Button, Card, Spinner, Alert } from 'react-bootstrap';
+import { Form, Button, Card, Spinner, Alert, Row, Col } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -90,7 +90,7 @@ const MilkCollection = () => {
     
     setLoading(true);
     try {
-      const response = await axios.post('/milk/collections', {
+      await axios.post('/milk/collections', {
         // vendor_id: formData.vendor_id, // Commented out - using center_id only
         center_id: formData.center_id,
         collection_date: formData.collection_date,
